@@ -21,6 +21,6 @@
             </feature>
         </config-file>
  
-        <source-file src="src/android/NotificationManager.java" target-dir="src/org/devgirl/calendar" />      
+        <source-file src="src/android/NotificationManager.java" target-dir="src/com/vendrov/plugins" />      
      </platform>          
 </plugin>
