@@ -1,10 +1,11 @@
-var notiifcation =  
+var notiifcation = { 
+    createNotification: function(){
     
         cordova.exec(
             successCallback, // success callback function
             errorCallback, // error callback function
-            'Calendar', // mapped to our native Java class called "Calendar"
-            'addCalendarEntry', // with this action name
+            'NotificationManager', // mapped to our native Java class called "Calendar"
+            'addNotification', // with this action name
             [{                  // and this array of custom arguments to create our entry
                 "title": title,
                 "description": notes,
@@ -13,4 +14,6 @@ var notiifcation =
                 "endTimeMillis": endDate.getTime()
             }]
         );
+    }
+}
 module.exports = notiifcation;
