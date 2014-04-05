@@ -3,7 +3,7 @@
 <plugin xmlns="http://www.phonegap.com/ns/plugins/1.0"
            id="com.vendrov.plugins"
       version="0.1.0">
-    <name>Calendar</name>
+    <name>Notification</name>
     <description>Notification Service plugin</description>
     <license>MIT</license>
     <keywords>phonegap,notification</keywords>
