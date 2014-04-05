@@ -1,4 +1,4 @@
-com.vendrov.plugins.NotificationManager;
+package com.vendrov.plugins.NotificationManager;
 
 import org.apache.cordova.CallbackContext;
 import org.apache.cordova.CordovaPlugin;
