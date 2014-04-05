@@ -16,4 +16,4 @@ var notiifcation = {
         );
     }
 }
-module.exports = notiifcation;
+module.exports = notifcation;
