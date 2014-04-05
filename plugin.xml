@@ -21,6 +21,14 @@
             </feature>
         </config-file>
  
-        <source-file src="src/android/NotificationManager.java" target-dir="src/com/vendrov/plugins" />      
+        <source-file src="src/android/NotificationManager.java" target-dir="src/com/vendrov/plugins" />  
+	
+      <config-file target="AndroidManifest.xml" parent="/*">
+         <service android:name="com.red_folder.phonegap.plugin.backgroundservice.sample.MyService">
+            <intent-filter>         
+               <action android:name="com.red_folder.phonegap.plugin.backgroundservice.sample.MyService"/> 
+            </intent-filter>     
+         </service>
+      </config-file>
      </platform>          
 </plugin>
