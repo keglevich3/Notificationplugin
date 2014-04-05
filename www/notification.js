@@ -1,4 +1,4 @@
-var notiifcation = { 
+var notification = { 
     createNotification: function(){
     
         cordova.exec(
@@ -16,4 +16,4 @@ var notiifcation = {
         );
     }
 }
-module.exports = notifcation;
+module.exports = notification;
