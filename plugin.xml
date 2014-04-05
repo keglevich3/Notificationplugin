@@ -2,7 +2,7 @@
  
 <plugin xmlns="http://www.phonegap.com/ns/plugins/1.0"
            id="com.vendrov.plugins"
-      version="0.1.1">
+      version="0.1.2">
     <name>Notification</name>
     <description>Notification Service plugin</description>
     <license>MIT</license>
@@ -23,12 +23,16 @@
  
         <source-file src="src/android/NotificationManager.java" target-dir="src/com/vendrov/plugins" />  
 	
-      <config-file target="AndroidManifest.xml" parent="/*">
-         <service android:name="com.red_folder.phonegap.plugin.backgroundservice.sample.MyService">
-            <intent-filter>         
-               <action android:name="com.red_folder.phonegap.plugin.backgroundservice.sample.MyService"/> 
-            </intent-filter>     
-         </service>
-      </config-file>
+      <config-file target="AndroidManifest.xml" parent="/manifest/application">
+			<activity android:name="com.plugin.gcm.PushHandlerActivity"/>
+			<receiver android:name="com.plugin.gcm.CordovaGCMBroadcastReceiver" android:permission="com.google.android.c2dm.permission.SEND" >
+				<intent-filter>
+					<action android:name="com.google.android.c2dm.intent.RECEIVE" />
+					<action android:name="com.google.android.c2dm.intent.REGISTRATION" />
+					<category android:name="$PACKAGE_NAME" />
+				</intent-filter>
+			</receiver>
+			<service android:name="com.plugin.gcm.GCMIntentService" />
+		</config-file>
      </platform>          
 </plugin>
