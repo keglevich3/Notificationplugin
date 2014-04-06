@@ -1,4 +1,4 @@
-package com.example.intenttest;
+package com.vendrov.plugins;
 
 import android.app.IntentService;
 import android.content.Intent;
